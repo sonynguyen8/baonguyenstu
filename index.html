@@ -1,11 +1,245 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,200..800;1,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#0e0e0e",
+                    "outline": "#919191",
+                    "surface-container-low": "#1b1b1b",
+                    "on-tertiary-fixed-variant": "#e4e2e1",
+                    "inverse-primary": "#5d5f5f",
+                    "inverse-surface": "#e2e2e2",
+                    "surface-variant": "#353535",
+                    "on-tertiary-container": "#000000",
+                    "on-surface-variant": "#c6c6c6",
+                    "surface-dim": "#131313",
+                    "error": "#ffb4ab",
+                    "secondary": "#c7c6c6",
+                    "on-secondary-container": "#e3e2e2",
+                    "on-primary-fixed": "#ffffff",
+                    "outline-variant": "#474747",
+                    "secondary-fixed": "#c7c6c6",
+                    "surface-container": "#1f1f1f",
+                    "secondary-fixed-dim": "#ababab",
+                    "on-primary": "#1a1c1c",
+                    "surface": "#131313",
+                    "tertiary-container": "#929090",
+                    "surface-container-high": "#2a2a2a",
+                    "on-tertiary-fixed": "#ffffff",
+                    "on-secondary-fixed-variant": "#3b3b3c",
+                    "surface-tint": "#c6c6c7",
+                    "surface-container-highest": "#353535",
+                    "on-surface": "#e2e2e2",
+                    "secondary-container": "#464747",
+                    "on-background": "#e2e2e2",
+                    "inverse-on-surface": "#303030",
+                    "primary-container": "#d4d4d4",
+                    "surface-bright": "#393939",
+                    "primary-fixed-dim": "#454747",
+                    "on-error": "#690005",
+                    "on-error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#474747",
+                    "on-tertiary": "#1b1c1c",
+                    "on-secondary": "#1b1c1c",
+                    "error-container": "#93000a",
+                    "on-primary-fixed-variant": "#e2e2e2",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "tertiary": "#e4e2e1",
+                    "primary-fixed": "#5d5f5f",
+                    "tertiary-fixed": "#5f5e5e",
+                    "primary": "#ffffff",
+                    "on-primary-container": "#000000",
+                    "background": "#131313"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131313;
+            color: #e2e2e2;
+            font-family: 'Manrope', sans-serif;
+        }
+        .cinematic-scrubber {
+            height: 1px;
+            background: #ffffff;
+            width: 0%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+        .glass-nav {
+            background: rgba(19, 19, 19, 0.7);
+            backdrop-filter: blur(20px);
+        }
+    </style>
 </head>
-<body>
-    <h1>Hello World</h1>
-</body>
-</html>
+<body class="selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 border-none rounded-none bg-neutral-950/70 backdrop-blur-xl flex justify-between items-center px-6 md:px-12 py-6 md:py-8 w-full">
+<div class="font-['Newsreader'] text-xl md:text-2xl font-light tracking-[0.2em] text-white uppercase">
+            BAONGUYENSTUDIO
+        </div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="text-white font-medium border-b border-white/40 pb-1 font-['Newsreader'] italic tracking-tight text-lg" href="#">Home</a>
+<a class="text-neutral-500 hover:text-white transition-colors duration-400 font-['Newsreader'] italic tracking-tight text-lg" href="#">Portfolio</a>
+<a class="text-neutral-500 hover:text-white transition-colors duration-400 font-['Newsreader'] italic tracking-tight text-lg" href="#">About</a>
+<a class="text-neutral-500 hover:text-white transition-colors duration-400 font-['Newsreader'] italic tracking-tight text-lg" href="#">Services</a>
+<a class="text-neutral-500 hover:text-white transition-colors duration-400 font-['Newsreader'] italic tracking-tight text-lg" href="#">Contact</a>
+</div>
+<div class="flex items-center text-white">
+<span class="material-symbols-outlined cursor-pointer" data-icon="menu">menu</span>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover grayscale brightness-50" data-alt="dramatic black and white wide shot of a couple standing in a vast foggy landscape with subtle wind motion" src="https://lh3.googleusercontent.com/aida/ADBb0ugimNREmj9KxlqduyNEWjUbDQPpMq1Br_H3wZbaScg041GscJGAdqn_M_kYiZi_1KAfCuYBKV4jIyijKYa5FMZmFLroAcX4Qj9io3YeyhuIkz1ayZNXEhZfKayJ_OPs4rNioQzoUNw59-pfvpza9g4XhyaXQlIKZ5DxM2B5Xv_CPbPKsTi1lwPCIRW1tT_buFGgAFaRbWqHzBTjljqmrNgqDqNCsFFPX9EKW8_IL2sIBb6_0c6dWJlRGHRNr7rSelK51FR4syc3"/>
+</div>
+<div class="relative z-10 text-center px-4">
+<h1 class="font-headline italic font-extralight text-4xl md:text-7xl lg:text-8xl text-white tracking-tighter max-w-5xl leading-tight">
+                    Preserving the silent poetry of your most intimate moments.
+                </h1>
+<p class="font-body uppercase tracking-[0.4em] text-white/60 mt-8 text-xs md:text-sm">
+                    Cinematic Noir Photography
+                </p>
+</div>
+<!-- Cinematic Scrubber Placeholder (Decorative) -->
+<div class="absolute bottom-0 left-0 w-1/3 h-[1px] bg-white"></div>
+</section>
+<!-- About Section (Editorial Layout) -->
+<section class="py-24 md:py-48 px-6 md:px-12 bg-surface">
+<div class="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-center">
+<div class="lg:col-span-5 aspect-[3/4] overflow-hidden grayscale">
+<img class="w-full h-full object-cover" data-alt="high contrast black and white fine art portrait of a photographer with dramatic shadows and sharp lighting" src="https://lh3.googleusercontent.com/aida/ADBb0ujyLkynAVn5pEPMhfFTeIph6fS5cZhpYiQgV7XYI10bqayXBL8azTaeBE7J2xilJ20jrusdBNxECDLcwY0c0uVWtkaUnbj4g0-XOJvX4fqlDhF508U6oSNcB683owQNsagW4Fi0o5a4H_7smnGJfG8dvAs2tNmd13UX9Qxi_4j4hUgxcoiIbm3yTd0AXAq1NT3pqQ0Ec-9ZOHlDM_ffBDrtxqjjBy8ud7zmMUpJ4I7hopTRbeqxiJPvnLGYW9s9Yi45Z3C80gt94Q"/>
+<p class="font-label text-[10px] uppercase tracking-widest text-outline mt-4 text-right">The Artist · 2024</p>
+</div>
+<div class="lg:col-span-7 flex flex-col justify-center">
+<span class="font-body uppercase tracking-[0.3em] text-outline text-xs mb-8">A Note from Bao</span>
+<h2 class="font-headline italic text-4xl md:text-6xl text-on-surface mb-12 leading-[1.1]">
+                        I don't just capture images. I document the atmosphere of existence.
+                    </h2>
+<div class="max-w-[50ch] space-y-6">
+<p class="font-body text-on-surface-variant leading-relaxed text-lg font-light">
+                            My approach is rooted in the philosophy of the cinematic negative—finding beauty in the shadows, and depth in the unspoken. Based in the heart of the city, I travel worldwide to capture love in its rawest, most unposed form.
+                        </p>
+<p class="font-body text-on-surface-variant leading-relaxed text-lg font-light">
+                            Every frame is a curated memory, treated with the same reverence as a piece of gallery art. We aren't just making photos; we are building your legacy.
+                        </p>
+</div>
+<div class="mt-16">
+<button class="group relative flex items-center space-x-4 border-b border-outline-variant pb-2 hover:border-primary transition-all duration-400">
+<span class="font-label uppercase tracking-widest text-xs">Read the Manifesto</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-2 transition-transform duration-400" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section (What I Do) -->
+<section class="py-24 md:py-48 bg-surface-container-low px-6 md:px-12">
+<div class="max-w-screen-2xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-baseline mb-24 gap-4">
+<h2 class="font-headline italic text-5xl md:text-7xl text-white">What I Do</h2>
+<p class="font-body uppercase tracking-widest text-outline text-xs">Tailored Editorial Experiences</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-0.5 bg-outline-variant/10">
+<!-- Portraits -->
+<div class="bg-surface group cursor-pointer p-8 md:p-12 transition-colors duration-500 hover:bg-surface-container-high">
+<div class="aspect-[4/5] mb-8 overflow-hidden">
+<img class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" data-alt="moody black and white studio portrait of a woman with dramatic rim lighting and shadow play" src="https://lh3.googleusercontent.com/aida/ADBb0uhg3Aqm0TnFUmcm4pMx3OuIszVONDBOANUjtgZk-NwxPgi2JIHP_wlL0K8yDy3pZHz-V2eaPyvtH90hZFeAC5-vCIJha4AYlboruKYvaqzqM5vDl5MNHOoMItDJD7urIKZazQ5KJQX08pWVg3X7gg8Vgscqfh-95xfn_TqOU1eNgyZY8P0MguuJuKy4I3TS8mHcog433SjLU7ht3c99e8xXGFejEVhdFYeAuUdhAwGMwB1S8n1cdDpAwVgUO0XfQHG-oh624ZbO_A"/>
+</div>
+<h3 class="font-headline text-3xl italic mb-4">Portraits</h3>
+<p class="font-body text-on-surface-variant text-sm leading-relaxed mb-8">Personal legacies captured with an editorial lens. Focused on identity and the quiet power of the individual.</p>
+<span class="font-label text-[10px] uppercase tracking-widest text-outline group-hover:text-white transition-colors">01 / Fine Art</span>
+</div>
+<!-- Love Stories -->
+<div class="bg-surface group cursor-pointer p-8 md:p-12 transition-colors duration-500 hover:bg-surface-container-high">
+<div class="aspect-[4/5] mb-8 overflow-hidden">
+<img class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" data-alt="intimate close-up of a couple's hands interlaced in black and white with soft film grain" src="https://lh3.googleusercontent.com/aida/ADBb0ug4RXUjPSC2eK65ADjMTDU2__02bQf8dElZdP2KygqduzwBHHowv9pslJS-eS18Wx1Vhv-RxOyaA1OOq4Bqy3I4irsLGrnudnviLXPeL-mbpbpJJMeX_zjsUxVrhAoAGyxBKCD7yFO4qaiM3k5oUaCoB7OfP0EZex5TlW5x7tO-ias50EEsz6ryKMDzSq6l7sZM_cs2XXoIQsz1eJ1qICep03doksn2kRvYgL5x7dUfMGyOrWmhSJhs7YzkVwNT6qZq4l_-dDdFkg"/>
+</div>
+<h3 class="font-headline text-3xl italic mb-4">Love Stories</h3>
+<p class="font-body text-on-surface-variant text-sm leading-relaxed mb-8">Unscripted moments between two souls. We document the chemistry that words cannot define.</p>
+<span class="font-label text-[10px] uppercase tracking-widest text-outline group-hover:text-white transition-colors">02 / Narrative</span>
+</div>
+<!-- Weddings -->
+<div class="bg-surface group cursor-pointer p-8 md:p-12 transition-colors duration-500 hover:bg-surface-container-high">
+<div class="aspect-[4/5] mb-8 overflow-hidden">
+<img class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105" data-alt="black and white shot of a bride from behind overlooking a balcony with her veil caught in the breeze" src="https://lh3.googleusercontent.com/aida/ADBb0uhaYlkBnoV6oBpTEyHwEi-1cJio8hs8L0pvPPyOWAfXbkRUxlUU_fLBJX2izWrYINRwsodul4u6NKqxkmyoHz6dwK9EPCUejcAolbRF9Ddn80w_-0PzyNmjgRnNDtMD15lZOsDzd3OCQAiMmbN0vTDGsCyFxk66MohoCbsvPAOvztAgMfP0KMR-Uh-FFqjgbt4Y9PzCplPo-j51p0Ddl6BDOY5VRVwsVw2mHtu__MU-bOeiwbyeoxfjRcpV32sihtOUcmH07bFeYA"/>
+</div>
+<h3 class="font-headline text-3xl italic mb-4">Weddings</h3>
+<p class="font-body text-on-surface-variant text-sm leading-relaxed mb-8">Full-day cinematic coverage. A timeless visual archive of your most significant celebration.</p>
+<span class="font-label text-[10px] uppercase tracking-widest text-outline group-hover:text-white transition-colors">03 / Archive</span>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="relative h-[819px] w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover grayscale brightness-75" data-alt="extremely soft focus black and white close-up of delicate lace fabric with ethereal light bokeh" src="https://lh3.googleusercontent.com/aida/ADBb0uj92xey8jGQMuyDOjLBFMINlH0omypjdpcAeeuYSkmCs3cedMNeK8Nv_9pBxI4Spe4fXfUZGWUoldjv7-6R6y-A-gMZj9pwaP9F6EtRmFOT_YW_l9aZbPVeYWqAxUGQx8XCEFJCFLxms78PZlabUPinhHBTFNwZ4kjifJIOaGYAIXE_e5c4Nj7ujOcauL-4MP-tCqfhnLV-GkiwWdjlO36W1ob5Aa1NIfFDPVaaGuOkiy17Xp1nmM3e73BplAuZ9wIOSY82R3Vx"/>
+</div>
+<div class="relative z-10 text-center px-6 max-w-4xl">
+<h2 class="font-headline italic text-5xl md:text-8xl text-white mb-12">Let's document your story.</h2>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6">
+<button class="bg-primary text-on-primary px-10 py-5 font-label uppercase tracking-widest text-xs transition-all duration-400 hover:bg-on-surface hover:text-surface">
+                        Book a Consultation
+                    </button>
+<button class="border border-white/20 hover:border-white text-white px-10 py-5 font-label uppercase tracking-widest text-xs transition-all duration-400">
+                        View Galleries
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-neutral-950 w-full border-t border-white/5 rounded-none mt-0">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full max-w-screen-2xl mx-auto">
+<div class="order-2 md:order-1 mt-12 md:mt-0">
+<p class="font-['Manrope'] text-[10px] uppercase tracking-[0.15em] text-neutral-600">
+                    © 2024 BAONGUYENSTUDIO. ALL RIGHTS RESERVED.
+                </p>
+</div>
+<div class="order-1 md:order-2 flex flex-wrap justify-center gap-8 md:gap-16">
+<a class="font-['Manrope'] text-[10px] uppercase tracking-[0.15em] text-neutral-600 hover:text-white transition-colors duration-400" href="#">Instagram</a>
+<a class="font-['Manrope'] text-[10px] uppercase tracking-[0.15em] text-neutral-600 hover:text-white transition-colors duration-400" href="#">Vogue</a>
+<a class="font-['Manrope'] text-[10px] uppercase tracking-[0.15em] text-neutral-600 hover:text-white transition-colors duration-400" href="#">Behance</a>
+<a class="font-['Manrope'] text-[10px] uppercase tracking-[0.15em] text-neutral-600 hover:text-white transition-colors duration-400" href="#">Email</a>
+</div>
+</div>
+<div class="w-full pb-8 flex justify-center">
+<div class="font-['Newsreader'] text-[8vw] font-black tracking-tighter text-surface-container-highest/10 select-none">
+                BAONGUYENSTUDIO
+            </div>
+</div>
+</footer>
+<!-- Fixed Scroll Indicator (Cinematic Scrubber) -->
+<div class="cinematic-scrubber" id="scroll-indicator"></div>
+</body></html>
