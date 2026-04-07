@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#474747",
+                    "on-tertiary-container": "#000000",
+                    "on-secondary-container": "#e3e2e2",
+                    "secondary-container": "#464747",
+                    "primary": "#ffffff",
+                    "tertiary-fixed-dim": "#474747",
+                    "background": "#131313",
+                    "surface-bright": "#393939",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "secondary-fixed-dim": "#ababab",
+                    "on-tertiary-fixed-variant": "#e4e2e1",
+                    "on-error-container": "#ffdad6",
+                    "error": "#ffb4ab",
+                    "tertiary": "#e4e2e1",
+                    "surface-container-low": "#1b1b1b",
+                    "on-secondary-fixed-variant": "#3b3b3c",
+                    "surface-variant": "#353535",
+                    "primary-fixed": "#5d5f5f",
+                    "inverse-on-surface": "#303030",
+                    "on-tertiary-fixed": "#ffffff",
+                    "outline": "#919191",
+                    "on-primary": "#1a1c1c",
+                    "on-background": "#e2e2e2",
+                    "tertiary-fixed": "#5f5e5e",
+                    "on-secondary": "#1b1c1c",
+                    "surface-container-highest": "#353535",
+                    "on-error": "#690005",
+                    "surface-container": "#1f1f1f",
+                    "surface": "#131313",
+                    "on-primary-fixed": "#ffffff",
+                    "inverse-surface": "#e2e2e2",
+                    "error-container": "#93000a",
+                    "inverse-primary": "#5d5f5f",
+                    "surface-dim": "#131313",
+                    "primary-fixed-dim": "#454747",
+                    "surface-tint": "#c6c6c7",
+                    "on-tertiary": "#1b1c1c",
+                    "tertiary-container": "#929090",
+                    "on-surface": "#e2e2e2",
+                    "primary-container": "#d4d4d4",
+                    "surface-container-lowest": "#0e0e0e",
+                    "secondary": "#c7c6c6",
+                    "on-primary-container": "#000000",
+                    "on-primary-fixed-variant": "#e2e2e2",
+                    "on-surface-variant": "#c6c6c6",
+                    "secondary-fixed": "#c7c6c6",
+                    "surface-container-high": "#2a2a2a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131313;
+            color: #e2e2e2;
+            font-family: 'Manrope', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .cinematic-scrubber {
+            height: 1px;
+            background: #ffffff;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background">
+<!-- TopNavBar Shared Component -->
+<nav class="fixed top-0 w-full z-50 bg-neutral-950/70 backdrop-blur-xl flex justify-between items-center px-6 md:px-12 py-6">
+<div class="text-2xl font-medium tracking-tighter text-white font-['Newsreader']">BaoNguyenStudio</div>
+<!-- Desktop Links -->
+<div class="hidden md:flex items-center gap-x-8 font-['Newsreader'] tracking-tight">
+<a class="text-white border-b border-white/40 pb-1 hover:text-white transition-colors duration-400 ease-in-out scale-100 active:scale-95" href="#">Portfolios</a>
+<a class="text-neutral-400 hover:text-white transition-colors duration-400 ease-in-out scale-100 active:scale-95" href="#">Albums</a>
+<a class="text-neutral-400 hover:text-white transition-colors duration-400 ease-in-out scale-100 active:scale-95" href="#">Stories</a>
+<a class="text-neutral-400 hover:text-white transition-colors duration-400 ease-in-out scale-100 active:scale-95" href="#">About</a>
+</div>
+<div class="flex items-center text-white">
+<span class="material-symbols-outlined cursor-pointer" data-icon="menu">menu</span>
+</div>
+</nav>
+<main class="pt-32 pb-24">
+<!-- Header Section -->
+<header class="px-6 md:px-12 mb-16 md:mb-24">
+<div class="max-w-screen-2xl mx-auto">
+<h1 class="font-headline text-5xl md:text-7xl lg:text-8xl font-light tracking-tight text-primary mb-12">Selected Works</h1>
+<!-- Filter Navigation -->
+<div class="flex flex-wrap gap-x-4 gap-y-4 border-t border-outline-variant/20 pt-8">
+<button class="font-label text-[10px] uppercase tracking-widest text-primary border border-primary px-6 py-2 rounded-full">All</button>
+<button class="font-label text-[10px] uppercase tracking-widest text-outline border border-outline/30 hover:border-primary hover:text-primary transition-all duration-300 px-6 py-2 rounded-full">Portraits</button>
+<button class="font-label text-[10px] uppercase tracking-widest text-outline border border-outline/30 hover:border-primary hover:text-primary transition-all duration-300 px-6 py-2 rounded-full">Love Stories</button>
+<button class="font-label text-[10px] uppercase tracking-widest text-outline border border-outline/30 hover:border-primary hover:text-primary transition-all duration-300 px-6 py-2 rounded-full">Weddings</button>
+</div>
+</div>
+</header>
+<!-- Cinematic Scrubber -->
+<div class="w-full h-px bg-white/5 mb-20">
+<div class="cinematic-scrubber" style="width: 45%;"></div>
+</div>
+<!-- Portfolio Gallery (Asymmetric Layout) -->
+<section class="px-6 md:px-12">
+<div class="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-y-24 md:gap-y-40">
+<!-- Item 1: Large Horizontal (IMAGE_10) -->
+<div class="md:col-span-8 flex flex-col group">
+<div class="overflow-hidden bg-surface-container-lowest">
+<img alt="The Veil" class="w-full grayscale hover:grayscale-0 transition-all duration-700 ease-in-out object-cover aspect-[16/10]" src="https://lh3.googleusercontent.com/aida/ADBb0uj92xey8jGQMuyDOjLBFMINlH0omypjdpcAeeuYSkmCs3cedMNeK8Nv_9pBxI4Spe4fXfUZGWUoldjv7-6R6y-A-gMZj9pwaP9F6EtRmFOT_YW_l9aZbPVeYWqAxUGQx8XCEFJCFLxms78PZlabUPinhHBTFNwZ4kjifJIOaGYAIXE_e5c4Nj7ujOcauL-4MP-tCqfhnLV-GkiwWdjlO36W1ob5Aa1NIfFDPVaaGuOkiy17Xp1nmM3e73BplAuZ9wIOSY82R3Vx"/>
+</div>
+<div class="mt-6 flex justify-between items-baseline">
+<h3 class="font-headline text-3xl font-light italic">The Silent Veil</h3>
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Weddings · 2024</span>
+</div>
+</div>
+<!-- Item 2: Vertical Offset (IMAGE_4) -->
+<div class="md:col-start-10 md:col-span-3 md:mt-40 flex flex-col group">
+<div class="overflow-hidden bg-surface-container-lowest">
+<img alt="Closer Portrait" class="w-full grayscale hover:grayscale-0 transition-all duration-700 ease-in-out object-cover aspect-[2/3]" src="https://lh3.googleusercontent.com/aida/ADBb0uhaYlkBnoV6oBpTEyHwEi-1cJio8hs8L0pvPPyOWAfXbkRUxlUU_fLBJX2izWrYINRwsodul4u6NKqxkmyoHz6dwK9EPCUejcAolbRF9Ddn80w_-0PzyNmjgRnNDtMD15lZOsDzd3OCQAiMmbN0vTDGsCyFxk66MohoCbsvPAOvztAgMfP0KMR-Uh-FFqjgbt4Y9PzCplPo-j51p0Ddl6BDOY5VRVwsVw2mHtu__MU-bOeiwbyeoxfjRcpV32sihtOUcmH07bFeYA"/>
+</div>
+<div class="mt-6">
+<h3 class="font-headline text-2xl font-light">Ethereal Bond</h3>
+<p class="font-label text-[10px] uppercase tracking-widest text-outline mt-2">Portraits</p>
+</div>
+</div>
+<!-- Item 3: Square Middle (IMAGE_5) -->
+<div class="md:col-start-2 md:col-span-5 flex flex-col group">
+<div class="overflow-hidden bg-surface-container-lowest">
+<img alt="Flight of Love" class="w-full grayscale hover:grayscale-0 transition-all duration-700 ease-in-out object-cover aspect-square" src="https://lh3.googleusercontent.com/aida/ADBb0ugimNREmj9KxlqduyNEWjUbDQPpMq1Br_H3wZbaScg041GscJGAdqn_M_kYiZi_1KAfCuYBKV4jIyijKYa5FMZmFLroAcX4Qj9io3YeyhuIkz1ayZNXEhZfKayJ_OPs4rNioQzoUNw59-pfvpza9g4XhyaXQlIKZ5DxM2B5Xv_CPbPKsTi1lwPCIRW1tT_buFGgAFaRbWqHzBTjljqmrNgqDqNCsFFPX9EKW8_IL2sIBb6_0c6dWJlRGHRNr7rSelK51FR4syc3"/>
+</div>
+<div class="mt-6">
+<h3 class="font-headline text-2xl font-light italic">Wings of Devotion</h3>
+<p class="font-label text-[10px] uppercase tracking-widest text-outline mt-2">Love Stories</p>
+</div>
+</div>
+<!-- Item 4: Vertical Right (IMAGE_9) -->
+<div class="md:col-start-8 md:col-span-4 md:-mt-20 flex flex-col group">
+<div class="overflow-hidden bg-surface-container-lowest">
+<img alt="Double Exposure" class="w-full grayscale hover:grayscale-0 transition-all duration-700 ease-in-out object-cover aspect-[2/3]" src="https://lh3.googleusercontent.com/aida/ADBb0uhg3Aqm0TnFUmcm4pMx3OuIszVONDBOANUjtgZk-NwxPgi2JIHP_wlL0K8yDy3pZHz-V2eaPyvtH90hZFeAC5-vCIJha4AYlboruKYvaqzqM5vDl5MNHOoMItDJD7urIKZazQ5KJQX08pWVg3X7gg8Vgscqfh-95xfn_TqOU1eNgyZY8P0MguuJuKy4I3TS8mHcog433SjLU7ht3c99e8xXGFejEVhdFYeAuUdhAwGMwB1S8n1cdDpAwVgUO0XfQHG-oh624ZbO_A"/>
+</div>
+<div class="mt-6 text-right">
+<h3 class="font-headline text-2xl font-light">Layered Memories</h3>
+<p class="font-label text-[10px] uppercase tracking-widest text-outline mt-2">Artistic</p>
+</div>
+</div>
+<!-- Item 5: Large Landscape Full (IMAGE_3) -->
+<div class="md:col-span-12 flex flex-col group py-12 md:py-24">
+<div class="overflow-hidden bg-surface-container-lowest">
+<img alt="Cityscape Love" class="w-full grayscale hover:grayscale-0 transition-all duration-700 ease-in-out object-cover aspect-[21/9]" src="https://lh3.googleusercontent.com/aida/ADBb0uhiz0ExiGlCADc2aGtuOqEwXbCZvy3tggq5ckrK6xGTi-o64y7rO8bGhn72w8LBWYpJI2NJ6TiOMz3nusItXl8Y4HrsjHFMzxPZwp46x09tOV-mSapX_4V9zkyavu8fzJFlWmnplr7mFjGFJp92pQx0LtFT22P9_sUYlVh16EievvCeStC8AJyjf2SSf6nHm1munflFprwRd0M7FRxXmqyPSOa3RoObHXN4GgTcde7IwgQmF6W6cgGpOlPx2jvkX_LWZTgiFCxU4A"/>
+</div>
+<div class="mt-8 flex justify-between items-start">
+<div class="max-w-md">
+<h3 class="font-headline text-4xl font-light">Skyline Serenade</h3>
+<p class="font-body text-sm text-outline-variant mt-4 leading-relaxed">Captured against the rising architectural giants, a moment of stillness in an ever-moving world.</p>
+</div>
+<span class="font-label text-[10px] uppercase tracking-widest text-primary border-b border-primary/20 pb-2">Weddings</span>
+</div>
+</div>
+<!-- Item 6: Portrait Bottom (IMAGE_6) -->
+<div class="md:col-start-4 md:col-span-6 flex flex-col group">
+<div class="overflow-hidden bg-surface-container-lowest">
+<img alt="Lakeside Dance" class="w-full grayscale hover:grayscale-0 transition-all duration-700 ease-in-out object-cover aspect-[16/10]" src="https://lh3.googleusercontent.com/aida/ADBb0ug4RXUjPSC2eK65ADjMTDU2__02bQf8dElZdP2KygqduzwBHHowv9pslJS-eS18Wx1Vhv-RxOyaA1OOq4Bqy3I4irsLGrnudnviLXPeL-mbpbpJJMeX_zjsUxVrhAoAGyxBKCD7yFO4qaiM3k5oUaCoB7OfP0EZex5TlW5x7tO-ias50EEsz6ryKMDzSq6l7sZM_cs2XXoIQsz1eJ1qICep03doksn2kRvYgL5x7dUfMGyOrWmhSJhs7YzkVwNT6qZq4l_-dDdFkg"/>
+</div>
+<div class="mt-6">
+<h3 class="font-headline text-2xl font-light italic">The Water's Waltz</h3>
+<p class="font-label text-[10px] uppercase tracking-widest text-outline mt-2">Love Stories</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-40 px-6 md:px-12 text-center">
+<div class="max-w-2xl mx-auto">
+<h2 class="font-headline text-4xl md:text-5xl font-light italic mb-10">Capture your own story</h2>
+<button class="bg-primary text-on-primary px-12 py-5 font-label uppercase tracking-widest text-xs transition-all duration-400 hover:opacity-90 active:scale-95">Book a Session</button>
+</div>
+</section>
+</main>
+<!-- Footer Shared Component -->
+<footer class="w-full border-t border-white/5 bg-neutral-950 flex flex-col md:flex-row justify-between items-center px-12 py-20">
+<div class="font-['Manrope'] uppercase tracking-widest text-[10px] text-neutral-500 mb-8 md:mb-0">
+            © 2024 BAO NGUYEN STUDIO. ALL RIGHTS RESERVED.
+        </div>
+<div class="flex items-center gap-x-12">
+<a class="font-['Manrope'] uppercase tracking-widest text-[10px] text-neutral-500 hover:text-white transition-opacity duration-300" href="#">Instagram</a>
+<a class="font-['Manrope'] uppercase tracking-widest text-[10px] text-neutral-500 hover:text-white transition-opacity duration-300" href="#">Privacy</a>
+<a class="font-['Manrope'] uppercase tracking-widest text-[10px] text-neutral-500 hover:text-white transition-opacity duration-300" href="#">Contact</a>
+</div>
+</footer>
+</body></html>
